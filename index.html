@@ -154,9 +154,7 @@
             <button onclick="closeAlert()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TAB 1: SAISONKALENDER & EVENTS             -->
-        <!-- ========================================== -->
+        <!-- TAB 1: SAISONKALENDER & EVENTS -->
         <div id="view-calendar" class="tab-content space-y-6">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl backdrop-blur-md">
                 <div>
@@ -166,7 +164,6 @@
                     <p class="text-xs text-slate-400 mt-1">Multi-Klassen Terminplanung für Opti A, Opti B, 420er, ILCA, 29er & 49er</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-3">
-                    <!-- FILTER MODUL FÜR BOOTSKLASSEN -->
                     <div class="flex items-center gap-2 bg-slate-900/80 px-3 py-1.5 rounded-xl border border-slate-700">
                         <i class="fa-solid fa-filter text-slate-400 text-xs"></i>
                         <span class="text-xs font-semibold text-slate-300 hidden sm:inline">Klasse:</span>
@@ -192,7 +189,6 @@
                 </div>
             </div>
 
-            <!-- MONTH CALENDAR DISPLAY -->
             <div id="calendarMonthContainer" class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/60 shadow-xl backdrop-blur-md">
                 <div class="flex items-center justify-between mb-6">
                     <h2 id="calendarMonthTitle" class="text-lg font-bold text-white">Oktober 2026</h2>
@@ -205,24 +201,16 @@
                 <div class="grid grid-cols-7 gap-1 text-center font-semibold text-xs text-slate-400 mb-2 uppercase tracking-wider">
                     <div>Mo</div><div>Di</div><div>Mi</div><div>Do</div><div>Fr</div><div>Sa</div><div>So</div>
                 </div>
-                <div id="calendarGrid" class="grid grid-cols-7 gap-1.5">
-                    <!-- Grid rendered dynamically -->
-                </div>
+                <div id="calendarGrid" class="grid grid-cols-7 gap-1.5"></div>
             </div>
 
-            <!-- EVENT LIST DISPLAY -->
             <div id="calendarListContainer" class="hidden space-y-4">
-                <div id="eventListGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- Cards rendered dynamically -->
-                </div>
+                <div id="eventListGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TAB 2: EVENT COCKPIT / OVERVIEW            -->
-        <!-- ========================================== -->
+        <!-- TAB 2: EVENT COCKPIT / OVERVIEW -->
         <div id="view-overview" class="tab-content hidden space-y-6">
-            <!-- Event Hero Banner -->
             <div class="bg-gradient-to-r from-navy-950 via-slate-900 to-ocean-900 rounded-3xl p-6 border border-slate-700/80 shadow-2xl relative overflow-hidden">
                 <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl text-ocean-400">
                     <i class="fa-solid fa-trophy"></i>
@@ -230,12 +218,8 @@
                 <div class="relative z-10 flex flex-col md:flex-row justify-between md:items-center gap-4">
                     <div>
                         <div class="flex flex-wrap items-center gap-2 mb-2">
-                            <span id="dashTypeBadge" class="inline-block px-3 py-0.5 bg-ocean-500/20 backdrop-blur-md rounded-full text-xs font-semibold text-ocean-300 border border-ocean-400/30">
-                                Regatta
-                            </span>
-                            <span id="dashStatusBadge" class="inline-block px-3 py-0.5 bg-emerald-500/20 backdrop-blur-md rounded-full text-xs font-semibold text-emerald-300 border border-emerald-400/30">
-                                Bestätigt
-                            </span>
+                            <span id="dashTypeBadge" class="inline-block px-3 py-0.5 bg-ocean-500/20 backdrop-blur-md rounded-full text-xs font-semibold text-ocean-300 border border-ocean-400/30">Regatta</span>
+                            <span id="dashStatusBadge" class="inline-block px-3 py-0.5 bg-emerald-500/20 backdrop-blur-md rounded-full text-xs font-semibold text-emerald-300 border border-emerald-400/30">Bestätigt</span>
                         </div>
                         <h1 id="dashTitle" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Kieler Woche 2026</h1>
                         <p id="dashDates" class="text-slate-300 text-sm mt-1">20.06.2026 - 28.06.2026 | Ort: <span id="dashLocation">Kiel-Schilksee</span></p>
@@ -251,15 +235,11 @@
                 </div>
             </div>
 
-            <!-- Readiness Quick Status -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Trailer Loading Status Card -->
                 <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl backdrop-blur-md flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-bold text-white flex items-center gap-2">
-                                <i class="fa-solid fa-trailer text-amber-400"></i> Hänger & Boote
-                            </h3>
+                            <h3 class="font-bold text-white flex items-center gap-2"><i class="fa-solid fa-trailer text-amber-400"></i> Hänger & Boote</h3>
                             <span id="dashTrailerStatusBadge" class="text-xs px-2.5 py-1 rounded-full font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">0/0 geladen</span>
                         </div>
                         <p class="text-xs text-slate-400 mb-3">Status der Bootssortierung auf Hängern & Dachträgern.</p>
@@ -267,18 +247,13 @@
                             <div id="dashTrailerBar" class="bg-amber-500 h-full transition-all duration-500" style="width: 0%"></div>
                         </div>
                     </div>
-                    <button onclick="switchTab('logistics')" class="mt-4 text-xs font-semibold text-ocean-400 hover:text-ocean-300 flex items-center gap-1">
-                        Zur Logistikplanung <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <button onclick="switchTab('logistics')" class="mt-4 text-xs font-semibold text-ocean-400 hover:text-ocean-300 flex items-center gap-1">Zur Logistikplanung <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Car Seats Status Card -->
                 <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl backdrop-blur-md flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-bold text-white flex items-center gap-2">
-                                <i class="fa-solid fa-car text-blue-400"></i> Personentransport
-                            </h3>
+                            <h3 class="font-bold text-white flex items-center gap-2"><i class="fa-solid fa-car text-blue-400"></i> Personentransport</h3>
                             <span id="dashSeatsStatusBadge" class="text-xs px-2.5 py-1 rounded-full font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30">0/0 untergebracht</span>
                         </div>
                         <p class="text-xs text-slate-400 mb-3">Verteilung von Seglern, Trainern & Betreuern auf Autos.</p>
@@ -286,18 +261,13 @@
                             <div id="dashSeatsBar" class="bg-blue-500 h-full transition-all duration-500" style="width: 0%"></div>
                         </div>
                     </div>
-                    <button onclick="switchTab('logistics')" class="mt-4 text-xs font-semibold text-ocean-400 hover:text-ocean-300 flex items-center gap-1">
-                        Zur Fahrtenplanung <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <button onclick="switchTab('logistics')" class="mt-4 text-xs font-semibold text-ocean-400 hover:text-ocean-300 flex items-center gap-1">Zur Fahrtenplanung <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Checklist Status Card -->
                 <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl backdrop-blur-md flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-bold text-white flex items-center gap-2">
-                                <i class="fa-solid fa-clipboard-check text-purple-400"></i> Packliste & Tech-Check
-                            </h3>
+                            <h3 class="font-bold text-white flex items-center gap-2"><i class="fa-solid fa-clipboard-check text-purple-400"></i> Packliste & Tech-Check</h3>
                             <span id="dashChecklistBadge" class="text-xs px-2.5 py-1 rounded-full font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">0% bereit</span>
                         </div>
                         <p class="text-xs text-slate-400 mb-3">Ausrüstungs-, Werkzeug- & Funkgeräte-Sicherheitscheck.</p>
@@ -305,35 +275,24 @@
                             <div id="dashChecklistBar" class="bg-purple-500 h-full transition-all duration-500" style="width: 0%"></div>
                         </div>
                     </div>
-                    <button onclick="switchTab('checklist')" class="mt-4 text-xs font-semibold text-ocean-400 hover:text-ocean-300 flex items-center gap-1">
-                        Zur Packliste <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <button onclick="switchTab('checklist')" class="mt-4 text-xs font-semibold text-ocean-400 hover:text-ocean-300 flex items-center gap-1">Zur Packliste <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
-            <!-- Quick Summary Print View Section -->
             <div class="bg-slate-800/50 rounded-2xl border border-slate-700/60 shadow-xl p-6 backdrop-blur-md">
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-lg font-bold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-list-ol text-ocean-400"></i> Multi-Klassen Event-Fahrtenübersicht
-                    </h2>
+                    <h2 class="text-lg font-bold text-white flex items-center gap-2"><i class="fa-solid fa-list-ol text-ocean-400"></i> Multi-Klassen Event-Fahrtenübersicht</h2>
                     <span class="text-xs text-slate-400">Kompaktübersicht für Trainer, Eltern & Fahrer</span>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="summaryViewContainer">
-                    <!-- Populated dynamically -->
-                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="summaryViewContainer"></div>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TAB 3: EVENT TEILNEHMER & BOOTE SELEKTOR  -->
-        <!-- ========================================== -->
+        <!-- TAB 3: EVENT TEILNEHMER & BOOTE SELEKTOR -->
         <div id="view-participants" class="tab-content hidden space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl backdrop-blur-md">
                 <div>
-                    <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-users text-emerald-400"></i> Event Meldeliste & Einsatzplanung
-                    </h2>
+                    <h2 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-users text-emerald-400"></i> Event Meldeliste & Einsatzplanung</h2>
                     <p class="text-xs text-slate-400">Übersicht der gemeldeten Segler, Boote und Begleit-RIBs für dieses Event.</p>
                 </div>
                 <button onclick="switchTab('masterdata')" class="admin-only text-xs font-semibold text-ocean-400 hover:text-ocean-300 underline flex items-center gap-1">
@@ -342,33 +301,25 @@
             </div>
 
             <div class="bg-slate-800/40 rounded-2xl border border-slate-700/60 shadow-xl p-6 space-y-6 backdrop-blur-md">
-                <!-- Sailors / Boats Selection -->
                 <div>
                     <h3 class="text-sm font-bold text-slate-200 uppercase tracking-wider mb-3 flex items-center justify-between border-b border-slate-700 pb-2">
                         <span>Gemeldete Segler & Vereinsboote</span>
                         <span id="selectedKidsCountBadge" class="text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2.5 py-0.5 rounded-full font-bold">0 ausgewählt</span>
                     </h3>
-                    <div id="participantsKidsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                        <!-- Checkboxes generated dynamically -->
-                    </div>
+                    <div id="participantsKidsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"></div>
                 </div>
 
-                <!-- Motorboats Checklist Selection -->
                 <div>
                     <h3 class="text-sm font-bold text-slate-200 uppercase tracking-wider mb-3 flex items-center justify-between border-b border-slate-700 pb-2">
                         <span>Begleitmotorboote (RIBs)</span>
                         <span id="selectedRibsCountBadge" class="text-xs bg-sky-500/20 text-sky-300 border border-sky-500/30 px-2.5 py-0.5 rounded-full font-bold">0 ausgewählt</span>
                     </h3>
-                    <div id="participantsRibsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                        <!-- Checkboxes generated dynamically -->
-                    </div>
+                    <div id="participantsRibsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"></div>
                 </div>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TAB 4: HÄNGER, BOOTE & LOGISTIK            -->
-        <!-- ========================================== -->
+        <!-- TAB 4: HÄNGER, BOOTE & LOGISTIK -->
         <div id="view-logistics" class="tab-content hidden space-y-8">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
@@ -377,18 +328,15 @@
                 </div>
             </div>
 
-            <!-- UNASSIGNED ITEMS BOARD -->
             <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-700 shadow-xl">
                 <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                     <i class="fa-solid fa-box-open text-amber-400"></i> Noch nicht zugeordnete Ressourcen für dieses Event
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Unassigned Boats -->
                     <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700 shadow-sm">
                         <span class="text-xs font-semibold text-slate-300 block mb-2">Unplatzierte Boote (<span id="unassignedOptisCount">0</span>):</span>
                         <div id="unassignedOptisList" class="flex flex-wrap gap-2 min-h-[36px] items-center"></div>
                     </div>
-                    <!-- Unassigned Kids -->
                     <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700 shadow-sm">
                         <span class="text-xs font-semibold text-slate-300 block mb-2">Unplatzierte Personen (<span id="unassignedKidsCount">0</span>):</span>
                         <div id="unassignedKidsList" class="flex flex-wrap gap-2 min-h-[36px] items-center"></div>
@@ -396,7 +344,6 @@
                 </div>
             </div>
 
-            <!-- TRAILERS SECTION -->
             <div class="space-y-4">
                 <h3 class="text-lg font-bold text-white flex items-center gap-2">
                     <i class="fa-solid fa-trailer text-amber-400"></i> Hänger & Dachträger Belegung
@@ -404,7 +351,6 @@
                 <div id="trailersGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             </div>
 
-            <!-- CARS SECTION -->
             <div class="space-y-4 pt-4 border-t border-slate-800">
                 <div class="flex items-center justify-between">
                     <h3 class="text-lg font-bold text-white flex items-center gap-2">
@@ -418,9 +364,7 @@
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TAB 5: MOTORBOOTE & COACH-RIBS             -->
-        <!-- ========================================== -->
+        <!-- TAB 5: MOTORBOOTE & COACH-RIBS -->
         <div id="view-ribs" class="tab-content hidden space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
@@ -428,13 +372,10 @@
                     <p class="text-xs text-slate-400">Sicherheitsboote, Funk, Treibstoff & Transport-Trailer</p>
                 </div>
             </div>
-
             <div id="ribsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TAB 6: CHECKLISTE & TECH-INSPEKTION       -->
-        <!-- ========================================== -->
+        <!-- TAB 6: CHECKLISTE & TECH-INSPEKTION -->
         <div id="view-checklist" class="tab-content hidden space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
@@ -450,13 +391,10 @@
                     </button>
                 </div>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="checklistCategoryContainer"></div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TAB 7: STAMMDATEN & FLOTTE (GLOBAL - ADMIN)-->
-        <!-- ========================================== -->
+        <!-- TAB 7: STAMMDATEN & FLOTTE (GLOBAL - ADMIN) -->
         <div id="view-masterdata" class="tab-content hidden space-y-8">
             <div class="bg-gradient-to-r from-slate-800 to-navy-900 border border-slate-700/80 p-5 rounded-2xl flex items-center justify-between shadow-xl">
                 <div class="flex items-center gap-3">
@@ -468,7 +406,6 @@
                 </div>
             </div>
 
-            <!-- Master Kids / Sailors -->
             <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/60 shadow-xl space-y-4 backdrop-blur-md">
                 <div class="flex justify-between items-center">
                     <h3 class="font-bold text-white text-lg flex items-center gap-2">
@@ -497,9 +434,7 @@
                 </div>
             </div>
 
-            <!-- Master Trailers & Cars -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Master Trailers -->
                 <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/60 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex justify-between items-center">
                         <h3 class="font-bold text-white text-base flex items-center gap-2">
@@ -512,7 +447,6 @@
                     <div id="masterTrailersList" class="space-y-2"></div>
                 </div>
 
-                <!-- Master Cars -->
                 <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/60 shadow-xl space-y-4 backdrop-blur-md">
                     <div class="flex justify-between items-center">
                         <h3 class="font-bold text-white text-base flex items-center gap-2">
@@ -526,7 +460,6 @@
                 </div>
             </div>
 
-            <!-- Master Ribs -->
             <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/60 shadow-xl space-y-4 backdrop-blur-md">
                 <div class="flex justify-between items-center">
                     <h3 class="font-bold text-white text-base flex items-center gap-2">
@@ -542,11 +475,9 @@
 
     </main>
 
-    <!-- ========================================== -->
-    <!-- MODALS SECTION                             -->
-    <!-- ========================================== -->
+    <!-- MODALS SECTION -->
 
-    <!-- COACH AUTH MODAL (PASSWORT-SCHUTZ) -->
+    <!-- COACH AUTH MODAL -->
     <div id="coachAuthModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
         <div class="bg-slate-800 rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-slate-700 text-slate-100">
             <div class="text-center mb-4">
@@ -767,7 +698,7 @@
         </div>
     </div>
 
-    <!-- CAR MODAL (Accessible by Parents for their own car) -->
+    <!-- CAR MODAL -->
     <div id="carModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
         <div class="bg-slate-800 rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-700 text-slate-100">
             <h3 id="carModalTitle" class="text-lg font-bold text-white mb-4">Fahrzeug eintragen / bearbeiten</h3>
@@ -788,7 +719,6 @@
                     </div>
                 </div>
 
-                <!-- Abfrage für welches Kind/welche Bootsklasse das Auto fährt -->
                 <div class="pt-2 border-t border-slate-700 space-y-2">
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">In welcher Bootsklasse segelt Ihr Kind?</label>
@@ -805,7 +735,6 @@
                     </div>
                 </div>
                 
-                <!-- AHK & Towing Load Options -->
                 <div class="pt-2 border-t border-slate-700 space-y-2">
                     <label class="flex items-center gap-2 cursor-pointer select-none">
                         <input type="checkbox" id="carHasAHK" onchange="toggleAHKOptions()" class="w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700">
@@ -891,17 +820,12 @@
         </div>
     </div>
 
-
-    <!-- ========================================== -->
-    <!-- LOGIC & APPLICATION CODE                   -->
-    <!-- ========================================== -->
+    <!-- LOGIC & APPLICATION CODE -->
     <script>
-        // PASSWORT FÜR TRAINER-ROLLE
         const COACH_PASSWORD = "trainer2026";
 
-        // INITIAL DEMO DATA STRUCTURE
         const INITIAL_DATA = {
-            currentUserRole: "parent", // Standard: "parent", schaltet auf "coach" nach Passwort-Verifizierung
+            currentUserRole: "parent",
             activeEventId: "e1",
             currentCalendarDate: { year: 2026, month: 5 },
             selectedClassFilter: "ALL",
@@ -998,14 +922,11 @@
             ]
         };
 
-        // App Central State
         let appData = {};
         let calendarMode = 'month';
 
-        // INITIALIZATION
         window.onload = function() {
             loadData();
-            // Prüfe, ob in dieser Session bereits die Trainer-Rolle freigeschaltet wurde
             if (sessionStorage.getItem('clubfleet_coach_authenticated') === 'true') {
                 appData.currentUserRole = 'coach';
             }
@@ -1034,7 +955,6 @@
             renderAllViews();
         }
 
-        // PASSWORT PRÜFUNG & ROLLEN
         function requestCoachRole() {
             if (sessionStorage.getItem('clubfleet_coach_authenticated') === 'true') {
                 setUserRole('coach');
@@ -1089,7 +1009,6 @@
 
                 document.querySelectorAll('.admin-only').forEach(el => el.classList.add('hidden'));
 
-                // Switch off masterdata tab if active for parent
                 const masterTab = document.getElementById('view-masterdata');
                 if (masterTab && !masterTab.classList.contains('hidden')) {
                     switchTab('overview');
@@ -1106,7 +1025,6 @@
             }
         }
 
-        // NAVIGATION TABS
         function switchTab(tabId) {
             if (tabId === 'masterdata' && !isCoach()) {
                 showAlert("Zugriff verweigert: Der Bereich Vereinskader & Flotte ist Trainern vorbehalten.", "info");
@@ -1153,7 +1071,6 @@
             document.getElementById('alertContainer').classList.add('hidden');
         }
 
-        // RENDER ALL
         function renderAllViews() {
             populateEventSelector();
             renderCalendarView();
@@ -1192,9 +1109,7 @@
             saveData();
         }
 
-        // ==========================================
         // 1. CALENDAR MODULE
-        // ==========================================
         function setCalendarMode(mode) {
             calendarMode = mode;
             document.getElementById('calendarMonthContainer').classList.toggle('hidden', mode !== 'month');
@@ -1370,6 +1285,8 @@
             e.preventDefault();
             if (!isCoach()) return;
             const id = document.getElementById('eventId').value;
+            const existingEv = id ? appData.events.find(e => e.id === id) : null;
+
             const newEv = {
                 id: id || 'e_' + Date.now(),
                 name: document.getElementById('eventInputName').value,
@@ -1381,11 +1298,11 @@
                 endDate: document.getElementById('eventInputEndDate').value,
                 coach: document.getElementById('eventInputCoach').value,
                 notes: document.getElementById('eventInputNotes').value,
-                participatingKidIds: id ? (appData.events.find(e=>e.id===id).participatingKidIds || []) : appData.masterKids.map(k=>k.id),
-                participatingRibIds: id ? (appData.events.find(e=>e.id===id).participatingRibIds || []) : appData.masterRibs.map(r=>r.id),
-                trailerAssignments: id ? (appData.events.find(e=>e.id===id).trailerAssignments || {}) : {},
-                carAssignments: id ? (appData.events.find(e=>e.id===id).carAssignments || {}) : {},
-                checklist: id ? (appData.events.find(e=>e.id===id).checklist || []) : []
+                participatingKidIds: existingEv ? (existingEv.participatingKidIds || []) : appData.masterKids.map(k=>k.id),
+                participatingRibIds: existingEv ? (existingEv.participatingRibIds || []) : appData.masterRibs.map(r=>r.id),
+                trailerAssignments: existingEv ? (existingEv.trailerAssignments || {}) : {},
+                carAssignments: existingEv ? (existingEv.carAssignments || {}) : {},
+                checklist: existingEv ? (existingEv.checklist || []) : []
             };
 
             if (id) {
@@ -1396,8 +1313,8 @@
                 appData.activeEventId = newEv.id;
             }
 
-            saveData();
             closeEventModal();
+            saveData();
             showAlert("Event im Kalender gespeichert!", "success");
         }
 
@@ -1409,13 +1326,12 @@
                 if (appData.activeEventId === id && appData.events.length > 0) {
                     appData.activeEventId = appData.events[0].id;
                 }
-                saveData();
                 closeEventModal();
+                saveData();
                 showAlert("Event gelöscht.", "info");
             }
         }
 
-        // iCal EXPORT (.ics)
         function generateICSContent(eventsArray) {
             let icsStr = "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//ClubFleet Pro Regatta Manager//DE\r\nCALSCALE:GREGORIAN\r\n";
             eventsArray.forEach(ev => {
@@ -1454,9 +1370,7 @@
             downloadICSFile(`ClubFleet_Saison_2026.ics`, content);
         }
 
-        // ==========================================
         // 2. EVENT DASHBOARD
-        // ==========================================
         function renderEventDashboard() {
             const ev = getActiveEvent();
             document.getElementById('dashTitle').textContent = ev.name;
@@ -1581,9 +1495,7 @@
             container.innerHTML = carSummaryHtml + trailerSummaryHtml;
         }
 
-        // ==========================================
         // 3. PARTICIPANTS SELECTOR
-        // ==========================================
         function renderParticipantsSelector() {
             const ev = getActiveEvent();
             const kidsContainer = document.getElementById('participantsKidsGrid');
@@ -1600,9 +1512,9 @@
                 const item = document.createElement('label');
                 item.className = `flex items-center gap-3 p-3 rounded-xl border cursor-pointer select-none transition ${isChecked ? 'bg-emerald-950/40 border-emerald-500/50 text-white' : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700'}`;
                 item.innerHTML = `
-                    <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleKidParticipation('${kid.id}')" class="w-4 h-4 text-emerald-500 rounded bg-slate-900 border-slate-700 focus:ring-emerald-500">
-                    <div>
-                        <div class="text-xs font-bold ${isChecked ? 'text-white' : 'text-slate-300'}">${kid.firstName} ${kid.lastName}</div>
+                    <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleParticipantKid('${kid.id}')" class="w-4 h-4 text-emerald-500 rounded border-slate-700 bg-slate-900 focus:ring-emerald-500">
+                    <div class="text-xs">
+                        <div class="font-bold ${isChecked ? 'text-emerald-300' : 'text-slate-300'}">${kid.firstName} ${kid.lastName}</div>
                         <div class="text-[10px] text-slate-400">${kid.group} | ${kid.sailNum}</div>
                     </div>
                 `;
@@ -1617,347 +1529,466 @@
                 const item = document.createElement('label');
                 item.className = `flex items-center gap-3 p-3 rounded-xl border cursor-pointer select-none transition ${isChecked ? 'bg-sky-950/40 border-sky-500/50 text-white' : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700'}`;
                 item.innerHTML = `
-                    <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleRibParticipation('${rib.id}')" class="w-4 h-4 text-sky-500 rounded bg-slate-900 border-slate-700 focus:ring-sky-500">
-                    <div>
-                        <div class="text-xs font-bold ${isChecked ? 'text-white' : 'text-slate-300'}">${rib.name}</div>
-                        <div class="text-[10px] text-slate-400">Coach: ${rib.driver} | ${rib.motor}</div>
+                    <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleParticipantRib('${rib.id}')" class="w-4 h-4 text-sky-500 rounded border-slate-700 bg-slate-900 focus:ring-sky-500">
+                    <div class="text-xs">
+                        <div class="font-bold ${isChecked ? 'text-sky-300' : 'text-slate-300'}">${rib.name}</div>
+                        <div class="text-[10px] text-slate-400">Fahrer: ${rib.driver} | ${rib.motor}</div>
                     </div>
                 `;
                 ribsContainer.appendChild(item);
             });
         }
 
-        function toggleKidParticipation(kidId) {
+        function toggleParticipantKid(kidId) {
             const ev = getActiveEvent();
             if (!ev.participatingKidIds) ev.participatingKidIds = [];
-
-            if (ev.participatingKidIds.includes(kidId)) {
-                ev.participatingKidIds = ev.participatingKidIds.filter(id => id !== kidId);
-            } else {
+            
+            const idx = ev.participatingKidIds.indexOf(kidId);
+            if (idx === -1) {
                 ev.participatingKidIds.push(kidId);
+            } else {
+                ev.participatingKidIds.splice(idx, 1);
             }
             saveData();
         }
 
-        function toggleRibParticipation(ribId) {
+        function toggleParticipantRib(ribId) {
             const ev = getActiveEvent();
             if (!ev.participatingRibIds) ev.participatingRibIds = [];
-
-            if (ev.participatingRibIds.includes(ribId)) {
-                ev.participatingRibIds = ev.participatingRibIds.filter(id => id !== ribId);
-            } else {
+            
+            const idx = ev.participatingRibIds.indexOf(ribId);
+            if (idx === -1) {
                 ev.participatingRibIds.push(ribId);
+            } else {
+                ev.participatingRibIds.splice(idx, 1);
             }
             saveData();
         }
 
-        // ==========================================
-        // 4. LOGISTICS (TRAILERS & CARS)
-        // ==========================================
-        function renderLogistics() {
-            const ev = getActiveEvent();
-
-            // Find Assigned Boats/Kids
-            const assignedKidIdsInTrailers = new Set();
-            if (ev.trailerAssignments) {
-                Object.values(ev.trailerAssignments).forEach(slots => {
-                    Object.values(slots).forEach(kId => { if (kId) assignedKidIdsInTrailers.add(kId); });
-                });
-            }
-
-            const assignedKidIdsInCars = new Set();
-            if (ev.carAssignments) {
-                Object.values(ev.carAssignments).forEach(car => {
-                    (car.passengers || []).forEach(kId => assignedKidIdsInCars.add(kId));
-                });
-            }
-
-            // Unassigned Lists
-            const unassignedOptisList = document.getElementById('unassignedOptisList');
-            const unassignedKidsList = document.getElementById('unassignedKidsList');
-
-            unassignedOptisList.innerHTML = '';
-            unassignedKidsList.innerHTML = '';
-
-            let unassignedOptisCount = 0;
-            let unassignedKidsCount = 0;
-
-            (ev.participatingKidIds || []).forEach(kidId => {
-                const kid = appData.masterKids.find(k => k.id === kidId);
-                if (!kid) return;
-
-                if (!assignedKidIdsInTrailers.has(kidId)) {
-                    unassignedOptisCount++;
-                    unassignedOptisList.innerHTML += `
-                        <span class="text-xs bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2.5 py-1 rounded-lg font-semibold flex items-center gap-1.5">
-                            <i class="fa-solid fa-sailboat"></i> ${kid.firstName} (${kid.sailNum})
-                        </span>
-                    `;
-                }
-
-                if (!assignedKidIdsInCars.has(kidId)) {
-                    unassignedKidsCount++;
-                    unassignedKidsList.innerHTML += `
-                        <span class="text-xs bg-blue-500/20 text-blue-300 border border-blue-500/30 px-2.5 py-1 rounded-lg font-semibold flex items-center gap-1.5">
-                            <i class="fa-solid fa-user"></i> ${kid.firstName} ${kid.lastName}
-                        </span>
-                    `;
-                }
-            });
-
-            document.getElementById('unassignedOptisCount').textContent = unassignedOptisCount;
-            document.getElementById('unassignedKidsCount').textContent = unassignedKidsCount;
-
-            // Render Trailers Grid
-            const trailersGrid = document.getElementById('trailersGrid');
-            trailersGrid.innerHTML = '';
-
-            appData.masterTrailers.forEach(trailer => {
-                const card = document.createElement('div');
-                card.className = "bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl space-y-4 backdrop-blur-md flex flex-col justify-between";
-
-                const slots = (ev.trailerAssignments && ev.trailerAssignments[trailer.id]) ? ev.trailerAssignments[trailer.id] : {};
-
-                let slotsHtml = '';
-                for (let level = 1; level <= trailer.levels; level++) {
-                    slotsHtml += `<div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800 space-y-2">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block"><i class="fa-solid fa-layer-group text-amber-400 mr-1"></i> Etage ${level}</span>
-                        <div class="grid grid-cols-${trailer.perLevel} gap-2">`;
-
-                    for (let pos = 1; pos <= trailer.perLevel; pos++) {
-                        const slotKey = `${level}-${pos}`;
-                        const assignedKidId = slots[slotKey] || '';
-
-                        let selectOptions = `<option value="">-- Leer --</option>`;
-                        (ev.participatingKidIds || []).forEach(kId => {
-                            const kid = appData.masterKids.find(k => k.id === kId);
-                            if (kid) {
-                                const isSelected = kId === assignedKidId;
-                                selectOptions += `<option value="${kid.id}" ${isSelected ? 'selected' : ''}>${kid.firstName} (${kid.sailNum})</option>`;
-                            }
-                        });
-
-                        slotsHtml += `
-                            <div>
-                                <select onchange="assignTrailerSlot('${trailer.id}', '${slotKey}', this.value)" ${!isCoach() ? 'disabled' : ''} class="w-full text-xs font-semibold bg-slate-800 border border-slate-700 rounded-lg p-1.5 text-slate-200 outline-none focus:ring-1 focus:ring-amber-500 ${assignedKidId ? 'border-amber-500/50 bg-amber-950/20 text-amber-200' : ''}">
-                                    ${selectOptions}
-                                </select>
-                            </div>
-                        `;
+        // 4. LOGISTICS (TRAILERS, CARS & ASSIGNMENTS WITH ABSICHERUNG)
+        function getKidLocation(kidId, currentEv) {
+            // Hilfsfunktion zur Ermittlung des aktuellen Orts einer Person im Event
+            if (currentEv.carAssignments) {
+                for (const carId in currentEv.carAssignments) {
+                    const carData = currentEv.carAssignments[carId];
+                    if (carData.passengers && carData.passengers.includes(kidId)) {
+                        const car = appData.masterCars.find(c => c.id === carId);
+                        return car ? car.name : "anderem Auto";
                     }
-                    slotsHtml += `</div></div>`;
                 }
-
-                card.innerHTML = `
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <div>
-                                <h4 class="font-bold text-white text-base">${trailer.name}</h4>
-                                <span class="text-xs text-amber-400 font-medium">Klasse: ${trailer.boatClass}</span>
-                            </div>
-                            <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-1 rounded-lg border border-slate-700 font-mono"><i class="fa-solid fa-weight-hanging mr-1"></i>Max ${trailer.weight}kg</span>
-                        </div>
-                        <div class="space-y-2 mt-3">${slotsHtml}</div>
-                    </div>
-                `;
-                trailersGrid.appendChild(card);
-            });
-
-            // Render Cars Grid
-            const carsGrid = document.getElementById('carsGrid');
-            carsGrid.innerHTML = '';
-
-            appData.masterCars.forEach(car => {
-                const card = document.createElement('div');
-                card.className = "bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl space-y-4 backdrop-blur-md flex flex-col justify-between";
-
-                const carState = (ev.carAssignments && ev.carAssignments[car.id]) ? ev.carAssignments[car.id] : { trailerId: '', passengers: [] };
-
-                // Trailer Dropdown for Car
-                let trailerSelectOptions = `<option value="">-- Kein Hänger --</option>`;
-                appData.masterTrailers.forEach(tr => {
-                    const isSelected = tr.id === carState.trailerId;
-                    trailerSelectOptions += `<option value="${tr.id}" ${isSelected ? 'selected' : ''}>${tr.name}</option>`;
-                });
-
-                // Passengers List Checkboxes / Multiselect
-                let passengersHtml = `<div class="space-y-1.5 max-h-40 overflow-y-auto no-scrollbar bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">`;
-                (ev.participatingKidIds || []).forEach(kId => {
-                    const kid = appData.masterKids.find(k => k.id === kId);
-                    if (kid) {
-                        const isChecked = (carState.passengers || []).includes(kId);
-                        passengersHtml += `
-                            <label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer hover:text-white select-none">
-                                <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="toggleCarPassenger('${car.id}', '${kid.id}')" class="w-3.5 h-3.5 text-blue-600 rounded bg-slate-800 border-slate-700">
-                                <span>${kid.firstName} ${kid.lastName} (${kid.group})</span>
-                            </label>
-                        `;
-                    }
-                });
-                passengersHtml += `</div>`;
-
-                let ahkBadge = car.hasAHK ? (car.canTowLargeTrailer ? `<span class="text-[10px] bg-blue-500/20 text-blue-300 border border-blue-500/30 px-2 py-0.5 rounded font-medium"><i class="fa-solid fa-truck-monster mr-1"></i>Heavy Tow ${car.maxTow||2000}kg</span>` : `<span class="text-[10px] bg-slate-800 text-slate-300 border border-slate-700 px-2 py-0.5 rounded font-medium"><i class="fa-solid fa-trailer mr-1"></i>AHK</span>`) : `<span class="text-[10px] bg-slate-800 text-slate-500 px-2 py-0.5 rounded font-normal">Keine AHK</span>`;
-
-                card.innerHTML = `
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <div>
-                                <h4 class="font-bold text-white text-base">${car.name}</h4>
-                                <span class="text-xs text-slate-400 font-medium"><i class="fa-solid fa-id-badge text-blue-400 mr-1"></i>Fahrer: ${car.driver}</span>
-                                ${car.childClass ? `<div class="text-[11px] text-amber-300 font-medium">Kind-Klasse: ${car.childClass}</div>` : ''}
-                            </div>
-                            ${ahkBadge}
-                        </div>
-
-                        <div class="space-y-3 mt-3">
-                            <div>
-                                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1"><i class="fa-solid fa-trailer text-amber-400 mr-1"></i> Zuweisung Anhänger</label>
-                                <select onchange="assignCarTrailer('${car.id}', this.value)" class="w-full text-xs font-semibold bg-slate-900 border border-slate-700 rounded-lg p-2 text-slate-200 outline-none focus:ring-1 focus:ring-blue-500">
-                                    ${trailerSelectOptions}
-                                </select>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between items-center mb-1">
-                                    <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400"><i class="fa-solid fa-users text-blue-400 mr-1"></i> Mitfahrer</label>
-                                    <span class="text-[10px] font-bold text-slate-400">${(carState.passengers || []).length} / ${car.seats} Plätze</span>
-                                </div>
-                                ${passengersHtml}
-                            </div>
-                        </div>
-                    </div>
-                `;
-                carsGrid.appendChild(card);
-            });
+            }
+            return null;
         }
 
-        function assignTrailerSlot(trailerId, slotKey, kidId) {
+        function getBoatLocation(kidId, currentEv) {
+            // Hilfsfunktion zur Ermittlung des aktuellen Hängers eines Bootes im Event
+            if (currentEv.trailerAssignments) {
+                for (const trailerId in currentEv.trailerAssignments) {
+                    const slots = currentEv.trailerAssignments[trailerId];
+                    for (const slotKey in slots) {
+                        if (slots[slotKey] === kidId) {
+                            const tr = appData.masterTrailers.find(t => t.id === trailerId);
+                            return tr ? tr.name : "anderem Hänger";
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        function assignKidToCar(carId, slotIdx, kidId) {
+            const ev = getActiveEvent();
+            if (!ev.carAssignments) ev.carAssignments = {};
+            if (!ev.carAssignments[carId]) ev.carAssignments[carId] = { trailerId: null, passengers: [] };
+
+            // Verhinderung der Doppelzuordnung: Entferne Person aus allen Fahrzeugen des aktuellen Events
+            if (kidId) {
+                Object.keys(ev.carAssignments).forEach(cId => {
+                    if (ev.carAssignments[cId].passengers) {
+                        ev.carAssignments[cId].passengers = ev.carAssignments[cId].passengers.filter(id => id !== kidId);
+                    }
+                });
+                ev.carAssignments[carId].passengers[slotIdx] = kidId;
+            } else {
+                ev.carAssignments[carId].passengers.splice(slotIdx, 1);
+            }
+
+            // Aufräumen von leeren Array-Einträgen
+            ev.carAssignments[carId].passengers = ev.carAssignments[carId].passengers.filter(Boolean);
+            saveData();
+        }
+
+        function assignBoatToTrailer(trailerId, level, pos, kidId) {
             const ev = getActiveEvent();
             if (!ev.trailerAssignments) ev.trailerAssignments = {};
             if (!ev.trailerAssignments[trailerId]) ev.trailerAssignments[trailerId] = {};
 
-            ev.trailerAssignments[trailerId][slotKey] = kidId;
-            saveData();
-        }
+            const slotKey = `${level}-${pos}`;
 
-        function assignCarTrailer(carId, trailerId) {
-            const ev = getActiveEvent();
-            if (!ev.carAssignments) ev.carAssignments = {};
-            if (!ev.carAssignments[carId]) ev.carAssignments[carId] = { trailerId: '', passengers: [] };
-
-            ev.carAssignments[carId].trailerId = trailerId;
-            saveData();
-        }
-
-        function toggleCarPassenger(carId, kidId) {
-            const ev = getActiveEvent();
-            if (!ev.carAssignments) ev.carAssignments = {};
-            if (!ev.carAssignments[carId]) ev.carAssignments[carId] = { trailerId: '', passengers: [] };
-
-            const passengers = ev.carAssignments[carId].passengers || [];
-            if (passengers.includes(kidId)) {
-                ev.carAssignments[carId].passengers = passengers.filter(id => id !== kidId);
+            // Verhinderung der Doppelzuordnung: Entferne Boot von allen Hängern des aktuellen Events
+            if (kidId) {
+                Object.keys(ev.trailerAssignments).forEach(tId => {
+                    Object.keys(ev.trailerAssignments[tId]).forEach(sKey => {
+                        if (ev.trailerAssignments[tId][sKey] === kidId) {
+                            delete ev.trailerAssignments[tId][sKey];
+                        }
+                    });
+                });
+                ev.trailerAssignments[trailerId][slotKey] = kidId;
             } else {
-                passengers.push(kidId);
-                ev.carAssignments[carId].passengers = passengers;
+                delete ev.trailerAssignments[trailerId][slotKey];
             }
+
             saveData();
         }
 
-        // ==========================================
-        // 5. RIBS MODULE
-        // ==========================================
-        function renderRibs() {
+        function assignTrailerToCar(carId, trailerId) {
             const ev = getActiveEvent();
-            const container = document.getElementById('ribsGrid');
-            container.innerHTML = '';
+            if (!ev.carAssignments) ev.carAssignments = {};
+            if (!ev.carAssignments[carId]) ev.carAssignments[carId] = { trailerId: null, passengers: [] };
 
-            const activeRibIds = ev.participatingRibIds || [];
+            ev.carAssignments[carId].trailerId = trailerId || null;
+            saveData();
+        }
 
-            appData.masterRibs.forEach(rib => {
-                const isActive = activeRibIds.includes(rib.id);
-                const card = document.createElement('div');
-                card.className = `p-5 rounded-2xl border shadow-xl flex flex-col justify-between backdrop-blur-md transition ${isActive ? 'bg-slate-800/80 border-sky-500/50' : 'bg-slate-900/40 border-slate-800 opacity-60'}`;
+        function renderLogistics() {
+            const ev = getActiveEvent();
+            const participatingKids = (ev.participatingKidIds || []).map(id => appData.masterKids.find(k => k.id === id)).filter(Boolean);
 
-                card.innerHTML = `
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-bold text-white text-base flex items-center gap-2">
-                                <i class="fa-solid fa-ship text-sky-400"></i> ${rib.name}
-                            </h3>
-                            <span class="text-xs px-2.5 py-0.5 rounded-full font-semibold ${isActive ? 'bg-sky-500/20 text-sky-300 border border-sky-500/30' : 'bg-slate-800 text-slate-500'}">
-                                ${isActive ? 'Im Event-Einsatz' : 'Inaktiv'}
-                            </span>
+            // 1. Unplatzierte Boote berechnen
+            let assignedBoatKidIds = [];
+            if (ev.trailerAssignments) {
+                Object.values(ev.trailerAssignments).forEach(slots => {
+                    Object.values(slots).forEach(kidId => { if(kidId) assignedBoatKidIds.push(kidId); });
+                });
+            }
+            const unassignedBoats = participatingKids.filter(k => !assignedBoatKidIds.includes(k.id));
+
+            const unassignedOptisContainer = document.getElementById('unassignedOptisList');
+            document.getElementById('unassignedOptisCount').textContent = unassignedBoats.length;
+            unassignedOptisContainer.innerHTML = '';
+
+            if (unassignedBoats.length === 0) {
+                unassignedOptisContainer.innerHTML = `<span class="text-xs text-emerald-400 italic">Alle Boote platziert!</span>`;
+            } else {
+                unassignedBoats.forEach(k => {
+                    unassignedOptisContainer.innerHTML += `
+                        <span class="text-xs bg-slate-900 text-slate-300 border border-slate-700 px-2.5 py-1 rounded-lg font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-sailboat text-amber-400"></i> ${k.firstName} (${k.sailNum})
+                        </span>
+                    `;
+                });
+            }
+
+            // 2. Unplatzierte Personen berechnen
+            let assignedPersonKidIds = [];
+            if (ev.carAssignments) {
+                Object.values(ev.carAssignments).forEach(car => {
+                    (car.passengers || []).forEach(kidId => { if(kidId) assignedPersonKidIds.push(kidId); });
+                });
+            }
+            const unassignedPersons = participatingKids.filter(k => !assignedPersonKidIds.includes(k.id));
+
+            const unassignedKidsContainer = document.getElementById('unassignedKidsList');
+            document.getElementById('unassignedKidsCount').textContent = unassignedPersons.length;
+            unassignedKidsContainer.innerHTML = '';
+
+            if (unassignedPersons.length === 0) {
+                unassignedKidsContainer.innerHTML = `<span class="text-xs text-emerald-400 italic">Alle Personen untergebracht!</span>`;
+            } else {
+                unassignedPersons.forEach(k => {
+                    unassignedKidsContainer.innerHTML += `
+                        <span class="text-xs bg-slate-900 text-slate-300 border border-slate-700 px-2.5 py-1 rounded-lg font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-user text-blue-400"></i> ${k.firstName} ${k.lastName} (${k.group})
+                        </span>
+                    `;
+                });
+            }
+
+            // 3. Hänger Grid Renders mit Optischem Feedback (Disabled + Ortsanzeige)
+            const trailersGrid = document.getElementById('trailersGrid');
+            trailersGrid.innerHTML = '';
+
+            appData.masterTrailers.forEach(tr => {
+                const slots = (ev.trailerAssignments && ev.trailerAssignments[tr.id]) ? ev.trailerAssignments[tr.id] : {};
+
+                let levelsHtml = '';
+                for (let l = tr.levels; l >= 1; l--) {
+                    let levelSlotsHtml = '';
+                    for (let p = 1; p <= tr.perLevel; p++) {
+                        const slotKey = `${l}-${p}`;
+                        const currentAssignedKidId = slots[slotKey] || "";
+
+                        let optionsHtml = `<option value="">-- Leer --</option>`;
+                        participatingKids.forEach(k => {
+                            const isCurrentSlot = (k.id === currentAssignedKidId);
+                            const boatLoc = getBoatLocation(k.id, ev);
+                            const isDisabled = (boatLoc !== null && !isCurrentSlot);
+
+                            let labelText = `${k.firstName} ${k.lastName} (${k.sailNum})`;
+                            if (isDisabled) {
+                                labelText += ` (auf ${boatLoc})`;
+                            }
+
+                            optionsHtml += `<option value="${k.id}" ${isCurrentSlot ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}>${labelText}</option>`;
+                        });
+
+                        levelSlotsHtml += `
+                            <div class="flex-1 bg-slate-900/90 p-2 rounded-xl border border-slate-700">
+                                <span class="text-[10px] text-slate-400 font-semibold block mb-1">Platz ${p}</span>
+                                <select onchange="assignBoatToTrailer('${tr.id}', ${l}, ${p}, this.value)" class="w-full bg-slate-800 text-xs font-medium text-white p-1.5 rounded-lg border border-slate-700 outline-none focus:ring-1 focus:ring-amber-500 truncate">
+                                    ${optionsHtml}
+                                </select>
+                            </div>
+                        `;
+                    }
+
+                    levelsHtml += `
+                        <div class="space-y-1">
+                            <span class="text-[10px] uppercase font-bold text-slate-400">Etage ${l}</span>
+                            <div class="flex gap-2">${levelSlotsHtml}</div>
                         </div>
-                        <div class="text-xs text-slate-300 space-y-2">
-                            <div><i class="fa-solid fa-user-check w-4 text-slate-500"></i> Bootsführer / Coach: <span class="font-bold text-white">${rib.driver}</span></div>
-                            <div><i class="fa-solid fa-gauge-high w-4 text-slate-500"></i> Motorisierung: ${rib.motor}</div>
-                            <div><i class="fa-solid fa-gas-pump w-4 text-slate-500"></i> Tank-System: ${rib.fuel}</div>
-                            <div><i class="fa-solid fa-walkie-talkie w-4 text-slate-500"></i> UKW-Rufzeichen: <span class="font-mono text-amber-400 font-bold">${rib.vhf}</span></div>
+                    `;
+                }
+
+                trailersGrid.innerHTML += `
+                    <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl space-y-4 backdrop-blur-md">
+                        <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">${tr.name}</h4>
+                                <span class="text-[10px] text-amber-400 font-semibold">Klasse: ${tr.boatClass} | Max ${tr.weight||1200}kg</span>
+                            </div>
+                            <div class="p-2 bg-amber-500/20 text-amber-400 rounded-xl border border-amber-500/30">
+                                <i class="fa-solid fa-trailer"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-3">${levelsHtml}</div>
+                    </div>
+                `;
+            });
+
+            // 4. Autos Grid Renders mit Optischem Feedback (Disabled + Ortsanzeige)
+            const carsGrid = document.getElementById('carsGrid');
+            carsGrid.innerHTML = '';
+
+            appData.masterCars.forEach(car => {
+                const carEvState = ev.carAssignments ? ev.carAssignments[car.id] : null;
+                const assignedTrailerId = carEvState ? carEvState.trailerId : "";
+                const passengers = carEvState ? (carEvState.passengers || []) : [];
+
+                let trailerSelectHtml = `<option value="">-- Kein Hänger --</option>`;
+                appData.masterTrailers.forEach(tr => {
+                    trailerSelectHtml += `<option value="${tr.id}" ${tr.id === assignedTrailerId ? 'selected' : ''}>${tr.name}</option>`;
+                });
+
+                let passengersHtml = '';
+                for (let s = 0; s < car.seats; s++) {
+                    const currentAssignedKidId = passengers[s] || "";
+
+                    let optionsHtml = `<option value="">-- Freier Sitzplatz --</option>`;
+                    participatingKids.forEach(k => {
+                        const isCurrentSlot = (k.id === currentAssignedKidId);
+                        const kidLoc = getKidLocation(k.id, ev);
+                        const isDisabled = (kidLoc !== null && !isCurrentSlot);
+
+                        let labelText = `${k.firstName} ${k.lastName} (${k.group})`;
+                        if (isDisabled) {
+                            labelText += ` (in ${kidLoc})`;
+                        }
+
+                        optionsHtml += `<option value="${k.id}" ${isCurrentSlot ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}>${labelText}</option>`;
+                    });
+
+                    passengersHtml += `
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs text-slate-400 w-12 font-medium">Sitz ${s+1}:</span>
+                            <select onchange="assignKidToCar('${car.id}', ${s}, this.value)" class="flex-grow bg-slate-900 text-xs font-medium text-white p-2 rounded-xl border border-slate-700 outline-none focus:ring-1 focus:ring-blue-500 truncate">
+                                ${optionsHtml}
+                            </select>
+                        </div>
+                    `;
+                }
+
+                let ahkBadge = car.hasAHK ? `<span class="text-[10px] bg-blue-500/20 text-blue-300 border border-blue-500/30 px-2 py-0.5 rounded font-semibold">AHK ${car.maxTow?car.maxTow+'kg':''}</span>` : '';
+
+                carsGrid.innerHTML += `
+                    <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl space-y-4 backdrop-blur-md">
+                        <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">${car.name}</h4>
+                                <div class="text-xs text-slate-400 mt-0.5">Fahrer: <span class="text-slate-200 font-semibold">${car.driver}</span></div>
+                            </div>
+                            ${ahkBadge}
+                        </div>
+
+                        ${car.hasAHK ? `
+                            <div>
+                                <label class="block text-[10px] uppercase font-bold text-slate-400 mb-1">Gezogener Hänger</label>
+                                <select onchange="assignTrailerToCar('${car.id}', this.value)" class="w-full bg-slate-900 text-xs font-semibold text-amber-400 p-2 rounded-xl border border-slate-700 outline-none">
+                                    ${trailerSelectHtml}
+                                </select>
+                            </div>
+                        ` : ''}
+
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-slate-400 mb-2">Mitfahrende Personen (${passengers.filter(Boolean).length}/${car.seats})</label>
+                            <div class="space-y-2">${passengersHtml}</div>
                         </div>
                     </div>
                 `;
-                container.appendChild(card);
             });
         }
 
-        // ==========================================
+        function openCarModal(carId = null) {
+            document.getElementById('carForm').reset();
+            document.getElementById('carId').value = '';
+            document.getElementById('largeTrailerOptionContainer').classList.add('hidden');
+            document.getElementById('carModalTitle').textContent = 'Fahrzeug eintragen / bearbeiten';
+
+            if (carId) {
+                const c = appData.masterCars.find(item => item.id === carId);
+                if (c) {
+                    document.getElementById('carId').value = c.id;
+                    document.getElementById('carName').value = c.name;
+                    document.getElementById('carDriver').value = c.driver;
+                    document.getElementById('carSeats').value = c.seats;
+                    document.getElementById('carChildClass').value = c.childClass || 'Keine bestimmte';
+                    document.getElementById('carHasAHK').checked = !!c.hasAHK;
+                    document.getElementById('carMaxTow').value = c.maxTow || '';
+                    document.getElementById('carCanTowLargeTrailer').checked = !!c.canTowLargeTrailer;
+                    toggleAHKOptions();
+                    document.getElementById('carModalTitle').textContent = 'Fahrzeug bearbeiten';
+                }
+            }
+            document.getElementById('carModal').classList.remove('hidden');
+        }
+
+        function closeCarModal() {
+            document.getElementById('carModal').classList.add('hidden');
+        }
+
+        function toggleAHKOptions() {
+            const hasAHK = document.getElementById('carHasAHK').checked;
+            document.getElementById('largeTrailerOptionContainer').classList.toggle('hidden', !hasAHK);
+        }
+
+        function saveCar(e) {
+            e.preventDefault();
+            const id = document.getElementById('carId').value;
+            const newCar = {
+                id: id || 'c_' + Date.now(),
+                name: document.getElementById('carName').value,
+                driver: document.getElementById('carDriver').value,
+                seats: parseInt(document.getElementById('carSeats').value, 10),
+                childClass: document.getElementById('carChildClass').value,
+                hasAHK: document.getElementById('carHasAHK').checked,
+                maxTow: parseInt(document.getElementById('carMaxTow').value, 10) || 0,
+                canTowLargeTrailer: document.getElementById('carCanTowLargeTrailer').checked
+            };
+
+            if (id) {
+                const idx = appData.masterCars.findIndex(c => c.id === id);
+                if (idx !== -1) appData.masterCars[idx] = newCar;
+            } else {
+                appData.masterCars.push(newCar);
+            }
+
+            closeCarModal();
+            saveData();
+            showAlert("Fahrzeug gespeichert!", "success");
+        }
+
+        // 5. RIBS MODULE
+        function renderRibs() {
+            const grid = document.getElementById('ribsGrid');
+            grid.innerHTML = '';
+
+            appData.masterRibs.forEach(rib => {
+                grid.innerHTML += `
+                    <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl space-y-3 backdrop-blur-md">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-white text-base">${rib.name}</h3>
+                            <span class="p-2 bg-sky-500/20 text-sky-400 rounded-xl border border-sky-500/30"><i class="fa-solid fa-ship"></i></span>
+                        </div>
+                        <div class="text-xs text-slate-300 space-y-1">
+                            <div><span class="text-slate-400">Bootsführer:</span> ${rib.driver}</div>
+                            <div><span class="text-slate-400">Motorisierung:</span> ${rib.motor}</div>
+                            <div><span class="text-slate-400">Tankkapazität:</span> ${rib.fuel}</div>
+                            <div><span class="text-slate-400">UKW-Funk:</span> <span class="font-mono text-sky-400 font-semibold">${rib.vhf}</span></div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function openRibModal() {
+            if (!isCoach()) return;
+            document.getElementById('ribForm').reset();
+            document.getElementById('ribModal').classList.remove('hidden');
+        }
+
+        function closeRibModal() {
+            document.getElementById('ribModal').classList.add('hidden');
+        }
+
+        function saveRib(e) {
+            e.preventDefault();
+            if (!isCoach()) return;
+            const newRib = {
+                id: 'r_' + Date.now(),
+                name: document.getElementById('ribName').value,
+                driver: document.getElementById('ribDriver').value,
+                motor: document.getElementById('ribMotor').value,
+                fuel: document.getElementById('ribFuel').value,
+                vhf: document.getElementById('ribVHF').value
+            };
+            appData.masterRibs.push(newRib);
+            closeRibModal();
+            saveData();
+            showAlert("Begleitmotorboot angelegt!", "success");
+        }
+
         // 6. CHECKLIST MODULE
-        // ==========================================
         function renderChecklist() {
             const ev = getActiveEvent();
             const container = document.getElementById('checklistCategoryContainer');
             container.innerHTML = '';
 
-            const checklist = ev.checklist || [];
+            const list = ev.checklist || [];
+            if (list.length === 0) {
+                container.innerHTML = `<div class="col-span-full p-8 text-center text-slate-400 text-sm bg-slate-800/30 rounded-2xl border border-slate-700/40">Keine Packlisten-Positionen für dieses Event hinterlegt.</div>`;
+                return;
+            }
 
-            // Group by Category
             const categories = {};
-            checklist.forEach(item => {
+            list.forEach(item => {
                 if (!categories[item.category]) categories[item.category] = [];
                 categories[item.category].push(item);
             });
 
-            // Populate datalist for Modal Category input
-            const datalist = document.getElementById('existingCategories');
-            if (datalist) {
-                datalist.innerHTML = Object.keys(categories).map(cat => `<option value="${cat}">`).join('');
-            }
-
-            if (Object.keys(categories).length === 0) {
-                container.innerHTML = `<div class="col-span-full p-8 text-center text-slate-400 text-sm bg-slate-800/30 rounded-2xl border border-slate-700/40">Keine Checklisten-Einträge für dieses Event vorhanden.</div>`;
-                return;
-            }
-
-            Object.entries(categories).forEach(([category, items]) => {
-                const catCard = document.createElement('div');
-                catCard.className = "bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl backdrop-blur-md space-y-3";
-
+            Object.keys(categories).forEach(cat => {
                 let itemsHtml = '';
-                items.forEach(item => {
+                categories[cat].forEach(item => {
                     itemsHtml += `
-                        <label class="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer select-none transition">
-                            <div class="flex items-center gap-3">
-                                <input type="checkbox" ${item.checked ? 'checked' : ''} onchange="toggleChecklistItem('${item.id}')" class="w-4 h-4 text-purple-600 rounded bg-slate-800 border-slate-700 focus:ring-purple-500">
-                                <span class="text-xs font-semibold ${item.checked ? 'line-through text-slate-500' : 'text-slate-200'}">${item.text}</span>
-                            </div>
-                            ${isCoach() ? `<button onclick="deleteChecklistItem('${item.id}')" class="text-xs text-rose-400 hover:text-rose-300 px-1"><i class="fa-solid fa-trash-can"></i></button>` : ''}
+                        <label class="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer select-none">
+                            <span class="text-xs font-medium ${item.checked ? 'line-through text-slate-500' : 'text-slate-200'}">${item.text}</span>
+                            <input type="checkbox" ${item.checked ? 'checked' : ''} onchange="toggleCheckitem('${item.id}')" class="w-4 h-4 text-purple-600 rounded border-slate-700 bg-slate-900 focus:ring-purple-500">
                         </label>
                     `;
                 });
 
-                catCard.innerHTML = `
-                    <h4 class="font-bold text-white text-sm uppercase tracking-wider flex items-center justify-between border-b border-slate-700 pb-2">
-                        <span><i class="fa-solid fa-list-check text-purple-400 mr-2"></i>${category}</span>
-                        <span class="text-xs font-normal text-slate-400">${items.filter(i=>i.checked).length}/${items.length} erledigt</span>
-                    </h4>
-                    <div class="space-y-2">${itemsHtml}</div>
+                container.innerHTML += `
+                    <div class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700/60 shadow-xl space-y-3 backdrop-blur-md">
+                        <h3 class="font-bold text-white text-sm border-b border-slate-700 pb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-purple-400"></i> ${cat}
+                        </h3>
+                        <div class="space-y-2">${itemsHtml}</div>
+                    </div>
                 `;
-                container.appendChild(catCard);
             });
         }
 
-        function toggleChecklistItem(itemId) {
+        function toggleCheckitem(itemId) {
             const ev = getActiveEvent();
             const item = (ev.checklist || []).find(c => c.id === itemId);
             if (item) {
@@ -1966,16 +1997,20 @@
             }
         }
 
-        function deleteChecklistItem(itemId) {
-            if (!isCoach()) return;
-            const ev = getActiveEvent();
-            ev.checklist = (ev.checklist || []).filter(c => c.id !== itemId);
-            saveData();
-        }
-
         function openChecklistItemModal() {
             if (!isCoach()) return;
             document.getElementById('checklistItemForm').reset();
+            const ev = getActiveEvent();
+            const datalist = document.getElementById('existingCategories');
+            datalist.innerHTML = '';
+            
+            const cats = Array.from(new Set((ev.checklist || []).map(c => c.category)));
+            cats.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                datalist.appendChild(opt);
+            });
+
             document.getElementById('checklistItemModal').classList.remove('hidden');
         }
 
@@ -1989,131 +2024,126 @@
             const ev = getActiveEvent();
             if (!ev.checklist) ev.checklist = [];
 
-            ev.checklist.push({
+            const newItem = {
                 id: 'ch_' + Date.now(),
                 category: document.getElementById('checkItemCategory').value,
                 text: document.getElementById('checkItemText').value,
                 checked: false
-            });
+            };
 
-            saveData();
+            ev.checklist.push(newItem);
             closeChecklistItemModal();
-            showAlert("Position zur Packliste hinzugefügt!", "success");
+            saveData();
+            showAlert("Packlisten-Position hinzugefügt!", "success");
         }
 
         function resetChecklist() {
             if (!isCoach()) return;
-            if (confirm("Möchten Sie die Checkliste für dieses Event auf Standardwerte zurücksetzen?")) {
-                const ev = getActiveEvent();
-                ev.checklist = [
-                    { id: "ch1", category: "Ausrüstung & Boot", text: "Ersatz-Spatzen, Wantenspanner & Schoten", checked: false },
-                    { id: "ch2", category: "Ausrüstung & Boot", text: "Trapezhosen & Rigg-Spannungsmesser", checked: false },
-                    { id: "ch3", category: "Sicherheit & Funk", text: "Trainer-UKW-Funkgeräte & Wasserdichte Hüllen", checked: false },
-                    { id: "ch4", category: "Dokumente", text: "Vermessungsbriefe aller Klassen mitführen", checked: false }
-                ];
+            const ev = getActiveEvent();
+            if (confirm("Packliste für dieses Event zurücksetzen?")) {
+                ev.checklist = [];
                 saveData();
-                showAlert("Checkliste zurückgesetzt.", "info");
+                showAlert("Packliste zurückgesetzt.", "info");
             }
         }
 
-        // ==========================================
-        // 7. MASTER DATA MODULE (ADMIN ONLY)
-        // ==========================================
+        // 7. MASTER DATA MODULE
         function renderMasterData() {
-            if (!isCoach()) return;
-
-            // Master Kids Table
+            // Segler Tabelle
             const kidsTable = document.getElementById('masterKidsTable');
             kidsTable.innerHTML = '';
 
-            appData.masterKids.forEach(kid => {
-                const row = document.createElement('tr');
-                row.className = "hover:bg-slate-800/50 transition";
-                row.innerHTML = `
-                    <td class="px-4 py-3 font-bold text-white">${kid.firstName} ${kid.lastName}</td>
-                    <td class="px-4 py-3"><span class="bg-ocean-500/20 text-ocean-300 border border-ocean-500/30 px-2 py-0.5 rounded text-xs font-semibold">${kid.group}</span></td>
-                    <td class="px-4 py-3 text-xs text-slate-400">${kid.role || 'Steuermann'}</td>
-                    <td class="px-4 py-3 font-mono text-xs text-amber-300 font-bold">${kid.sailNum}</td>
-                    <td class="px-4 py-3 text-xs">${kid.boatType}</td>
-                    <td class="px-4 py-3 text-xs text-slate-400">${kid.phone || '-'}</td>
-                    <td class="px-4 py-3 text-xs text-slate-400">${kid.email || '-'}</td>
-                    <td class="px-4 py-3 text-right">
-                        <button onclick="openKidModal('${kid.id}')" class="text-slate-400 hover:text-white mr-2"><i class="fa-solid fa-pen"></i></button>
-                        <button onclick="deleteKid('${kid.id}')" class="text-rose-400 hover:text-rose-300"><i class="fa-solid fa-trash"></i></button>
-                    </td>
+            appData.masterKids.forEach(k => {
+                kidsTable.innerHTML += `
+                    <tr class="hover:bg-slate-800/40">
+                        <td class="px-4 py-3 font-semibold text-white">${k.firstName} ${k.lastName}</td>
+                        <td class="px-4 py-3"><span class="text-xs bg-ocean-500/20 text-ocean-300 border border-ocean-500/30 px-2 py-0.5 rounded-full font-semibold">${k.group}</span></td>
+                        <td class="px-4 py-3 text-xs text-slate-300">${k.role || 'Einzelsegler'}</td>
+                        <td class="px-4 py-3 font-mono text-xs text-amber-400 font-bold">${k.sailNum}</td>
+                        <td class="px-4 py-3 text-xs text-slate-400">${k.boatType}</td>
+                        <td class="px-4 py-3 text-xs text-slate-300">${k.phone || '-'}</td>
+                        <td class="px-4 py-3 text-xs text-slate-400">${k.email || '-'}</td>
+                        <td class="px-4 py-3 text-right">
+                            <button onclick="openKidModal('${k.id}')" class="text-xs text-slate-400 hover:text-white mr-2"><i class="fa-solid fa-pen"></i></button>
+                            <button onclick="deleteKid('${k.id}')" class="text-xs text-rose-400 hover:text-rose-300"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
                 `;
-                kidsTable.appendChild(row);
             });
 
-            // Master Trailers List
+            // Hänger Liste
             const trailersList = document.getElementById('masterTrailersList');
             trailersList.innerHTML = '';
-            appData.masterTrailers.forEach(tr => {
+
+            appData.masterTrailers.forEach(t => {
                 trailersList.innerHTML += `
-                    <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs">
+                    <div class="flex items-center justify-between p-3 bg-slate-900/60 rounded-xl border border-slate-700/60 text-xs">
                         <div>
-                            <span class="font-bold text-white block">${tr.name}</span>
-                            <span class="text-slate-400">Klasse: ${tr.boatClass} | ${tr.levels} Etagen | Max ${tr.weight}kg</span>
+                            <span class="font-bold text-white block">${t.name}</span>
+                            <span class="text-slate-400">${t.boatClass} | ${t.levels} Etagen x ${t.perLevel} Boote | Max ${t.weight||1200}kg</span>
                         </div>
-                        <button onclick="deleteTrailer('${tr.id}')" class="text-rose-400 hover:text-rose-300 p-1"><i class="fa-solid fa-trash"></i></button>
+                        <button onclick="deleteTrailer('${t.id}')" class="text-rose-400 hover:text-rose-300 p-1"><i class="fa-solid fa-trash"></i></button>
                     </div>
                 `;
             });
 
-            // Master Cars List
+            // Autos Liste
             const carsList = document.getElementById('masterCarsList');
             carsList.innerHTML = '';
-            appData.masterCars.forEach(car => {
+
+            appData.masterCars.forEach(c => {
+                const childBadge = c.childClass ? `<span class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-1.5 py-0.5 rounded ml-2">Kind: ${c.childClass}</span>` : '';
                 carsList.innerHTML += `
-                    <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs">
+                    <div class="flex items-center justify-between p-3 bg-slate-900/60 rounded-xl border border-slate-700/60 text-xs">
                         <div>
-                            <span class="font-bold text-white block">${car.name} (${car.driver})</span>
-                            <span class="text-slate-400">${car.seats} Sitzplätze | ${car.hasAHK ? `AHK (${car.maxTow||2000}kg)` : 'Keine AHK'} ${car.childClass ? `| Kind: ${car.childClass}` : ''}</span>
+                            <span class="font-bold text-white block">${c.name} (${c.driver}) ${childBadge}</span>
+                            <span class="text-slate-400">${c.seats} Plätze ${c.hasAHK ? '| AHK vorhanden' : ''}</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <button onclick="openCarModal('${car.id}')" class="text-slate-400 hover:text-white p-1"><i class="fa-solid fa-pen"></i></button>
-                            <button onclick="deleteCar('${car.id}')" class="text-rose-400 hover:text-rose-300 p-1"><i class="fa-solid fa-trash"></i></button>
+                            <button onclick="openCarModal('${c.id}')" class="text-slate-400 hover:text-white p-1"><i class="fa-solid fa-pen"></i></button>
+                            <button onclick="deleteCar('${c.id}')" class="text-rose-400 hover:text-rose-300 p-1"><i class="fa-solid fa-trash"></i></button>
                         </div>
                     </div>
                 `;
             });
 
-            // Master Ribs List
+            // RIBs Liste
             const ribsList = document.getElementById('masterRibsList');
             ribsList.innerHTML = '';
-            appData.masterRibs.forEach(rib => {
+
+            appData.masterRibs.forEach(r => {
                 ribsList.innerHTML += `
-                    <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs space-y-1">
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-white">${rib.name}</span>
-                            <button onclick="deleteRib('${rib.id}')" class="text-rose-400 hover:text-rose-300"><i class="fa-solid fa-trash"></i></button>
+                    <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-700/60 text-xs space-y-1">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-white">${r.name}</span>
+                            <button onclick="deleteRib('${r.id}')" class="text-rose-400 hover:text-rose-300"><i class="fa-solid fa-trash"></i></button>
                         </div>
-                        <div class="text-slate-400">Coach: ${rib.driver}</div>
-                        <div class="text-slate-400">${rib.motor} | Funk: ${rib.vhf}</div>
+                        <div class="text-slate-400">Fahrer: ${r.driver}</div>
+                        <div class="text-slate-400">${r.motor} | Funk: <span class="text-sky-400 font-mono">${r.vhf}</span></div>
                     </div>
                 `;
             });
         }
 
-        // KID / SAILOR MODAL ACTIONS
         function openKidModal(kidId = null) {
+            if (!isCoach()) return;
             document.getElementById('kidForm').reset();
             document.getElementById('kidId').value = '';
             document.getElementById('kidModalTitle').textContent = 'Segler/in im Stammkader anlegen';
 
             if (kidId) {
-                const kid = appData.masterKids.find(k => k.id === kidId);
-                if (kid) {
-                    document.getElementById('kidId').value = kid.id;
-                    document.getElementById('kidFirstName').value = kid.firstName;
-                    document.getElementById('kidLastName').value = kid.lastName;
-                    document.getElementById('kidGroup').value = kid.group;
-                    document.getElementById('kidRole').value = kid.role || 'Einzelsegler';
-                    document.getElementById('kidSailNum').value = kid.sailNum;
-                    document.getElementById('kidBoatType').value = kid.boatType;
-                    document.getElementById('kidPhone').value = kid.phone || '';
-                    document.getElementById('kidEmail').value = kid.email || '';
-                    document.getElementById('kidModalTitle').textContent = 'Segler/in Bearbeiten';
+                const k = appData.masterKids.find(item => item.id === kidId);
+                if (k) {
+                    document.getElementById('kidId').value = k.id;
+                    document.getElementById('kidFirstName').value = k.firstName;
+                    document.getElementById('kidLastName').value = k.lastName;
+                    document.getElementById('kidGroup').value = k.group;
+                    document.getElementById('kidRole').value = k.role || 'Einzelsegler';
+                    document.getElementById('kidSailNum').value = k.sailNum;
+                    document.getElementById('kidBoatType').value = k.boatType;
+                    document.getElementById('kidPhone').value = k.phone || '';
+                    document.getElementById('kidEmail').value = k.email || '';
+                    document.getElementById('kidModalTitle').textContent = 'Segler/in bearbeiten';
                 }
             }
             document.getElementById('kidModal').classList.remove('hidden');
@@ -2125,6 +2155,7 @@
 
         function saveKid(e) {
             e.preventDefault();
+            if (!isCoach()) return;
             const id = document.getElementById('kidId').value;
             const newKid = {
                 id: id || 'k_' + Date.now(),
@@ -2145,9 +2176,9 @@
                 appData.masterKids.push(newKid);
             }
 
-            saveData();
             closeKidModal();
-            showAlert("Segler-Stammdaten gespeichert!", "success");
+            saveData();
+            showAlert("Segler/in im Kader gespeichert!", "success");
         }
 
         function deleteKid(kidId) {
@@ -2159,8 +2190,8 @@
             }
         }
 
-        // TRAILER MODAL ACTIONS
         function openTrailerModal() {
+            if (!isCoach()) return;
             document.getElementById('trailerForm').reset();
             document.getElementById('trailerModal').classList.remove('hidden');
         }
@@ -2171,19 +2202,20 @@
 
         function saveTrailer(e) {
             e.preventDefault();
-            const newTrailer = {
+            if (!isCoach()) return;
+            const newTr = {
                 id: 't_' + Date.now(),
                 name: document.getElementById('trailerName').value,
                 boatClass: document.getElementById('trailerBoatClass').value,
-                weight: parseInt(document.getElementById('trailerWeight').value) || 1200,
-                levels: parseInt(document.getElementById('trailerLevels').value) || 2,
-                perLevel: parseInt(document.getElementById('trailerPerLevel').value) || 2
+                weight: parseInt(document.getElementById('trailerWeight').value, 10) || 1200,
+                levels: parseInt(document.getElementById('trailerLevels').value, 10),
+                perLevel: parseInt(document.getElementById('trailerPerLevel').value, 10)
             };
 
-            appData.masterTrailers.push(newTrailer);
-            saveData();
+            appData.masterTrailers.push(newTr);
             closeTrailerModal();
-            showAlert("Stamm-Hänger angelegt!", "success");
+            saveData();
+            showAlert("Hänger im Stammregister angelegt!", "success");
         }
 
         function deleteTrailer(trailerId) {
@@ -2195,105 +2227,17 @@
             }
         }
 
-        // CAR MODAL ACTIONS (PARENT & COACH)
-        function toggleAHKOptions() {
-            const hasAHK = document.getElementById('carHasAHK').checked;
-            document.getElementById('largeTrailerOptionContainer').classList.toggle('hidden', !hasAHK);
-        }
-
-        function openCarModal(carId = null) {
-            document.getElementById('carForm').reset();
-            document.getElementById('carId').value = '';
-            document.getElementById('carHasAHK').checked = false;
-            toggleAHKOptions();
-            document.getElementById('carModalTitle').textContent = 'Fahrzeug eintragen / bearbeiten';
-
-            if (carId) {
-                const car = appData.masterCars.find(c => c.id === carId);
-                if (car) {
-                    document.getElementById('carId').value = car.id;
-                    document.getElementById('carName').value = car.name;
-                    document.getElementById('carDriver').value = car.driver;
-                    document.getElementById('carSeats').value = car.seats;
-                    document.getElementById('carChildClass').value = car.childClass || 'Keine bestimmte';
-                    document.getElementById('carHasAHK').checked = car.hasAHK || false;
-                    toggleAHKOptions();
-                    document.getElementById('carMaxTow').value = car.maxTow || '';
-                    document.getElementById('carCanTowLargeTrailer').checked = car.canTowLargeTrailer || false;
-                }
-            }
-            document.getElementById('carModal').classList.remove('hidden');
-        }
-
-        function closeCarModal() {
-            document.getElementById('carModal').classList.add('hidden');
-        }
-
-        function saveCar(e) {
-            e.preventDefault();
-            const id = document.getElementById('carId').value;
-            const newCar = {
-                id: id || 'c_' + Date.now(),
-                name: document.getElementById('carName').value,
-                driver: document.getElementById('carDriver').value,
-                seats: parseInt(document.getElementById('carSeats').value) || 4,
-                childClass: document.getElementById('carChildClass').value,
-                hasAHK: document.getElementById('carHasAHK').checked,
-                maxTow: parseInt(document.getElementById('carMaxTow').value) || 0,
-                canTowLargeTrailer: document.getElementById('carCanTowLargeTrailer').checked
-            };
-
-            if (id) {
-                const idx = appData.masterCars.findIndex(c => c.id === id);
-                if (idx !== -1) appData.masterCars[idx] = newCar;
-            } else {
-                appData.masterCars.push(newCar);
-            }
-
-            saveData();
-            closeCarModal();
-            showAlert("Fahrzeug erfolgreich gespeichert!", "success");
-        }
-
         function deleteCar(carId) {
-            if (!isCoach()) return;
-            if (confirm("Fahrzeug wirklich löschen?")) {
+            if (confirm("Fahrzeug wirklich entfernen?")) {
                 appData.masterCars = appData.masterCars.filter(c => c.id !== carId);
                 saveData();
                 showAlert("Fahrzeug gelöscht.", "info");
             }
         }
 
-        // RIB MODAL ACTIONS
-        function openRibModal() {
-            document.getElementById('ribForm').reset();
-            document.getElementById('ribModal').classList.remove('hidden');
-        }
-
-        function closeRibModal() {
-            document.getElementById('ribModal').classList.add('hidden');
-        }
-
-        function saveRib(e) {
-            e.preventDefault();
-            const newRib = {
-                id: 'r_' + Date.now(),
-                name: document.getElementById('ribName').value,
-                driver: document.getElementById('ribDriver').value,
-                motor: document.getElementById('ribMotor').value,
-                fuel: document.getElementById('ribFuel').value,
-                vhf: document.getElementById('ribVHF').value
-            };
-
-            appData.masterRibs.push(newRib);
-            saveData();
-            closeRibModal();
-            showAlert("Begleitmotorboot angelegt!", "success");
-        }
-
         function deleteRib(ribId) {
             if (!isCoach()) return;
-            if (confirm("Motorboot wirklich löschen?")) {
+            if (confirm("Begleitmotorboot wirklich aus der Flotte löschen?")) {
                 appData.masterRibs = appData.masterRibs.filter(r => r.id !== ribId);
                 saveData();
                 showAlert("Motorboot gelöscht.", "info");
